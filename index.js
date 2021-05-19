@@ -1,14 +1,10 @@
 function receivesAFunction(callback){
-    const spy = receivesAFunction(callback);
-    return spy;
-    //returnsANamedFunction(callback);
-    //returnsAnAnonymousFunction(callback);
+    callback();
 }
 function returnsANamedFunction() {
-     let name = " fun";
-     return name;
+    const namedFunction = () => "hi";
+    return namedFunction;
 }
-function returnsAnAnonymousFunction(){
-     let name = " ''";
-     return name;
-}
+function returnsAnAnonymousFunction() {
+    return function() {};
+};
